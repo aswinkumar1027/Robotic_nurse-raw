@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Robo Control</title>
+    <link rel="stylesheet" href="static/css/style.css" type="text/css"/>
+    <script src="//code.jquery.com/jquery-2.2.4.min.js"></script>
+  </head>
+  <body>
+    <header class="title">
+      <div>
+          <h1>Robo Control</h1>
+      </div>
+  </header>
+  <main>
+      <section class="card">
+          <span class="one-part">
+              <p>
+                  SPO2
+              </p>
+              <button class="on-btn" id="spox">
+                  ON
+              </button>
+          </span>
+          <span class="one-part">
+              <p>
+                  Temperature
+              </p>
+              <button class="on-btn" id="take_temp">
+                ON 
+            </button>
+          </span>
+          <span class="one-part">
+              <p>
+                  Pressure
+              </p>
+              <button class="on-btn" id="take_pressure">
+                ON 
+            </button>
+                
+          </span>
+      </section>
+      <section class="controller-card">
+          <span class="one-part">
+              <p>
+                  Follow Line
+              </p>
+              <button class="follow-btn" id="line">
+                  FOLLOW
+              </button>
+
+              <p>
+                Examine
+            </p>
+            <button class="examine-btn" id="examine">
+                EXAMINE
+            </button>
+          </span>
+          <span class="one-part">
+            <p>
+              Emerg Stop
+            </p>
+              <button class="es-btn" id="stop">
+                  STOP 
+              </button>
+          </span>
+          <div class="controller">
+            <button class="arrow-btn" id="forward">
+                Forward
+              </button><br/>
+              <span class="controls-lfrt">
+                <button class="arrow-btn" id="left">
+                    left
+                </button>
+                  <button class="arrow-btn" id="right">
+                    right  
+                  </button>
+              </span><br>
+              <button class="arrow-btn" id="backward">
+                Backward
+              </button><br/>
+          </div>
+      </section>
+  </main>
+
+
+
+    <script>
+      	$("button").click(function() {$.post("/move", {movement: this.id})});
+    </script>
+  </body>
+</html>
