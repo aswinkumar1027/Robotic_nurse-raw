@@ -21,7 +21,7 @@ sudo mv ~/mjpg-streamer/mjpg-streamer-experimental /opt/mjpg-streamer
 
 sudo rm -rf ~/mjpg-streamer
 
-LD_LIBRARY_PATH=/opt/mjpg-streamer/ /opt/mjpg-streamer/mjpg_streamer -i "input_raspicam.so -fps 15 -q 50 -x 840 -y 640" -o "output_http.so -p 9000 -w /opt/mjpg-streamer/www" &
+LLD_LIBRARY_PATH=/opt/mjpg-streamer/ /opt/mjpg-streamer/mjpg_streamer -i "input_raspicam.so -fps 15 -q 50 -x 640 -y 480" -o "output_http.so -p 9000 -w /opt/mjpg-streamer/www" &
 
 
 
@@ -42,4 +42,3 @@ Section
 
 
 
-Left_beds = ['F7', 'F8', 'F9', 'F10', 'F11', 'F12', 'F19', 'F20', 'F21', 'F22', 'F23', 'F24', 'F31', 'F32', 'F33', 'F34', 'F35', 'F36', 'F42', 'F43', 'F44', 'F45', 'F46', 'F47', 'F54', 'F55', 'F56', 'F57', 'F58', 'F59', 'F66', 'F67', 'F68', 'F69', 'F70', 'F71']

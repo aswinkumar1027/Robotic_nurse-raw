@@ -36,23 +36,33 @@
               <button class="on-btn" id="take_pressure">
                 ON 
             </button>
+            <span class="one-part">
+              <p>
+                  refresh beds
+              </p>
+              <button class="on-btn" id="active_fetch">
+                bed
+            </button>
                 
           </span>
+          <h1>Bed ID:, {{ bed_id }} </h1>
       </section>
       <section class="controller-card">
+        <iframe src="http://192.168.0.2:9000/javascript_simple.html" frameborder="0" width="640" height="480" align="right" scrolling="no" >
+        </iframe>
           <span class="one-part">
               <p>
-                  Follow Line
+                  Follow Line Start
               </p>
               <button class="follow-btn" id="line">
                   FOLLOW
               </button>
 
               <p>
-                Examine
+                Next Bed
             </p>
             <button class="examine-btn" id="examine">
-                EXAMINE
+                CONTINUE
             </button>
           </span>
           <span class="one-part">
