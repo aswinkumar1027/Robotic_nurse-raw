@@ -231,6 +231,16 @@ def spox():
 def fwd():
     robot.forward()
 
+def small_left():
+    robot.left()
+    time.sleep(0.4)
+    robot.stop()
+
+def small_right():
+    robot.right()
+    time.sleep(0.4)
+    robot.stop()
+
 robo_actions = {
     "forward": fwd,
     "backward": robot.backward,
@@ -242,7 +252,10 @@ robo_actions = {
     "take_pressure": take_pressure,
     "take_temp": take_temp,
     "spox": spox,
-    "active_fetch": active_fetch
+    "active_fetch": active_fetch,
+    "small_left": small_left,
+    "small_right": small_right
+
 }
 
 
