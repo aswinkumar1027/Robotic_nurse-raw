@@ -42,6 +42,8 @@ ser.baudrate = 19200
 
 turn_left = False
 line_follow_mode = False
+global bed
+bed = 'none'
 
 
 def line_follow_config(fn):
@@ -71,7 +73,8 @@ def active_fetch():
 
 
 def rfid_read():
-    global turn_left                                   #rfid taking and decisions
+    global turn_left
+    global bed                                   #rfid taking and decisions
     print("RFID_READ")
     bed = rfid_dict[rfid_cpy]
     
