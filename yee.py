@@ -6,7 +6,7 @@ while True:
     i = int(input("enter i"))
     j=int(input("enter j"))
     while (i <=j):
-            bed = 'F' + '%d' % i
+            bed = 'H' + '%d' % i
             print(bed)
             active_beds.append(bed)
             i = i + 1
